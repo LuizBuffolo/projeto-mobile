@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">News App T2</string>
+    <string name="news_image">Imagem da Notícia</string>
+    <string name="view_entire_news">Ver notícia completa</string>
+    <string name="news_source">Por %1$s em %2$s</string>
+    <string name="news_last_updated">Atualizado em: %1$s</string>
+    <string name="share_news">Compartilhar notícia</string>
+    <string name="get_data_error">Ocorreu um erro ao baixar os dados do serviço</string>
+    <string name="try_again">Tentar novamente</string>
+    <string name="unknown">desconhecido</string>
+</resources>

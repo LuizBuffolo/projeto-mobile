@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/newsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            tools:text="Flexible Electronics &amp; Circuit Market worth $48.5 billion by 2026 - Exclusive Report by MarketsandMarkets" />
+
+        <TextView
+            android:id="@+id/newsDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            tools:text="CHICAGO, March 12, 2021 /PRNewswire/ -- According to the new market research report \Flexible Electronics &amp; Circuit Market with COVID-19 Impact Analysis by Structure Type (Single Sided Flex Circuit, Multilayer Flex Circuit), Application (Displays, Printed Sen…" />
+
+        <ImageView
+            android:id="@+id/newsImage"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/news_image"
+            android:src="@drawable/ic_no_image" />
+
+        <TextView
+            android:id="@+id/newsContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="14sp"
+            tools:text="CHICAGO, March 12, 2021 /PRNewswire/ -- According to the new market research report \lexible Electronics &amp; Circuit Market with COVID-19 Impact Analysis by Structure Type (Single Sided Flex Circu… [+5691 chars]" />
+
+        <TextView
+            android:id="@+id/newsSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="By Jonathan Garber in PRNewswire" />
+
+        <TextView
+            android:id="@+id/newsLastUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="14sp"
+            tools:text="Last Updated: 2021-03-12T13:30:00Z" />
+
+        <Button
+            android:id="@+id/btnViewEntireNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:text="@string/view_entire_news" />
+
+        <Button
+            android:id="@+id/btnShareNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/share_news" />
+
+    </LinearLayout>
+
+</ScrollView>
