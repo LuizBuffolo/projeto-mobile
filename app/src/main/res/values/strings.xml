@@ -8,4 +8,10 @@
     <string name="get_data_error">An error occurred on get data from service</string>
     <string name="try_again">Try again</string>
     <string name="unknown">unknown</string>
+    <string name="type_your_search">Type your search here....</string>
+    <string name="click_to_search_news">Click to search news</string>
+    <string name="no_results_founded">No results founded or an error occurred. Please try again.</string>
+    <string name="invalid_url">Invalid URL</string>
+    <string name="need_install_browser">You need to install a browser</string>
+    <string name="need_install_message_app">You need to install a message app</string>
 </resources>

@@ -9,4 +9,10 @@
     <string name="get_data_error">Ocorreu um erro ao baixar os dados do serviço</string>
     <string name="try_again">Tentar novamente</string>
     <string name="unknown">desconhecido</string>
+    <string name="type_your_search">Digite sua pesquisa....</string>
+    <string name="click_to_search_news">Clique para pesquisar uma notícia</string>
+    <string name="no_results_founded">Nenhum resultado encontrado ou ocorreu um erro. Tente novamente.</string>
+    <string name="invalid_url">URL inválida</string>
+    <string name="need_install_browser">Você precisa instalar um navegador</string>
+    <string name="need_install_message_app">Você precisa instalar um aplicativo de mensagens</string>
 </resources>

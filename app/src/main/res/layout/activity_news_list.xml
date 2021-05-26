@@ -3,13 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewsListActivity">
+    tools:context=".presentation.scenes.newslist.NewsListActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewNews"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/news_item" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSearchNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/click_to_search_news"
+        android:src="@drawable/ic_search" />
 
     <ProgressBar
         android:id="@+id/progressIndicator"
@@ -20,6 +33,7 @@
 
     <include
         android:id="@+id/emptyState"
-        layout="@layout/empty_state" />
+        layout="@layout/empty_state"
+        android:visibility="gone"/>
 
 </RelativeLayout>
