@@ -13,7 +13,9 @@ import com.example.newsappt2.data.model.News
 import com.example.newsappt2.databinding.ActivityNewsDetailBinding
 import com.example.newsappt2.hide
 import com.example.newsappt2.presentation.common.ScreenState
+import com.example.newsappt2.presentation.scenes.login.LoginActivity
 import com.example.newsappt2.show
+import com.google.firebase.auth.FirebaseAuth
 import javax.inject.Inject
 
 class NewsDetailActivity : AppCompatActivity() {
@@ -23,6 +25,7 @@ class NewsDetailActivity : AppCompatActivity() {
     }
 
     lateinit var binding: ActivityNewsDetailBinding
+    private lateinit var firebaseAuth: FirebaseAuth
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -38,6 +41,19 @@ class NewsDetailActivity : AppCompatActivity() {
         (application as NewsAppApplication)
             .applicationComponent
             .inject(this)
+
+        firebaseAuth = FirebaseAuth.getInstance()
+
+        binding.username.text = firebaseAuth.currentUser!!.email
+
+        binding.buttonSignOut.setOnClickListener{
+            firebaseAuth.signOut()
+
+            val signOutIntent = Intent(this@NewsDetailActivity, LoginActivity::class.java)
+            signOutIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(signOutIntent)
+            finish()
+        }
 
         viewModel = ViewModelProvider(this, viewModelFactory).get(NewsDetailViewModel::class.java)
 

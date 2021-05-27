@@ -6,10 +6,48 @@
     android:layout_height="wrap_content"
     tools:context=".presentation.scenes.newsdetail.NewsDetailActivity">
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="@color/purple_500">
+
+        <TextView
+            android:id="@+id/helloLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:text="Hello, "
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="User"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/button_SignOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="295dp"
+        android:text="Sign Out"/>
+
+
     <ScrollView
         android:id="@+id/successState"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp">
 
         <LinearLayout
             android:layout_width="match_parent"

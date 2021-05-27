@@ -12,6 +12,7 @@ import com.example.newsappt2.common.NewsAppApplication
 import com.example.newsappt2.databinding.ActivitySearchNewsBinding
 import com.example.newsappt2.presentation.common.NewsListAdapter
 import com.example.newsappt2.presentation.common.ScreenState
+import com.google.firebase.auth.FirebaseAuth
 import javax.inject.Inject
 
 class SearchNewsActivity : AppCompatActivity() {

@@ -27,15 +27,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NewsAppT2">
-        <activity android:name=".presentation.scenes.searchnews.SearchNewsActivity" />
-        <activity android:name=".presentation.scenes.newsdetail.NewsDetailActivity" />
-        <activity android:name=".presentation.scenes.newslist.NewsListActivity">
+        <activity android:name=".presentation.scenes.favorites.FavoritesActivity"></activity>
+        <activity android:name=".presentation.scenes.login.RegisterActivity" />
+        <activity android:name=".presentation.scenes.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".presentation.scenes.searchnews.SearchNewsActivity" />
+        <activity android:name=".presentation.scenes.newsdetail.NewsDetailActivity" />
+        <activity android:name=".presentation.scenes.newslist.NewsListActivity" />
     </application>
 
 </manifest>

@@ -11,14 +11,19 @@ import com.example.newsappt2.common.NewsAppApplication
 import com.example.newsappt2.databinding.ActivityNewsListBinding
 import com.example.newsappt2.presentation.common.NewsListAdapter
 import com.example.newsappt2.presentation.common.ScreenState
+import com.example.newsappt2.presentation.scenes.favorites.FavoritesActivity
+import com.example.newsappt2.presentation.scenes.login.LoginActivity
 import com.example.newsappt2.presentation.scenes.newsdetail.NewsDetailActivity
 import com.example.newsappt2.presentation.scenes.searchnews.SearchNewsActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import javax.inject.Inject
 
 class NewsListActivity : AppCompatActivity() {
 
     private lateinit var viewModel: NewsListViewModel
     private lateinit var binding: ActivityNewsListBinding
+    private lateinit var firebaseAuth: FirebaseAuth
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -29,6 +34,10 @@ class NewsListActivity : AppCompatActivity() {
         binding = ActivityNewsListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        firebaseAuth = FirebaseAuth.getInstance()
+
+        binding.username.text = firebaseAuth.currentUser!!.email
+
         (application as NewsAppApplication)
             .applicationComponent
             .inject(this)
@@ -38,6 +47,20 @@ class NewsListActivity : AppCompatActivity() {
         val adapter = NewsListAdapter(this)
         binding.recyclerViewNews.adapter = adapter
         binding.recyclerViewNews.layoutManager = LinearLayoutManager(this)
+
+        binding.buttonSignOut.setOnClickListener{
+            firebaseAuth.signOut()
+
+            val signOutIntent = Intent(this@NewsListActivity, LoginActivity::class.java)
+            signOutIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(signOutIntent)
+            finish()
+        }
+
+        binding.btnFavNews.setOnClickListener{
+            val favIntent = Intent(this@NewsListActivity, FavoritesActivity::class.java)
+            startActivity(favIntent)
+        }
 
         binding.emptyState.btnTryAgain.setOnClickListener {
             viewModel.onTryAgainClicked()
