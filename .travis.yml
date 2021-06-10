@@ -51,7 +51,7 @@ deploy:
     file_glob: true
     skip_cleanup: true
   on:
-    repo: "LuizBuffolo/projeto-mobile"
+    repo: "LuizBuffolo/projeto-mobile" #myrepo
     branches:    
       only:      
         - master 
