@@ -52,6 +52,6 @@ deploy:
     skip_cleanup: true
   on:
     repo: "LuizBuffolo/projeto-mobile"
-    branches:    # ← new!
-      only:      # ← new!
-        - master # ← new!
+    branches:    
+      only:      
+        - master 
