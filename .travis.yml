@@ -55,16 +55,3 @@ deploy:
     branches:    # ← new!
       only:      # ← new!
         - master # ← new!
-
-
-deploy:
-  - provider: releases
-    api_key: $GITHUB_KEY
-    file: app/build/outputs/apk/release/*
-    file_glob: true
-    skip_cleanup: true
-    on:
-     repo: "LuizBuffolo/projeto-mobile"
-     branches:    # ← new!
-      only:      # ← new!
-        - master # ← new!
